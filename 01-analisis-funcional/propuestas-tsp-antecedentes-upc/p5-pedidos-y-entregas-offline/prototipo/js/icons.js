@@ -1,0 +1,82 @@
+/* Iconos de trazo (24×24). Sin dependencias externas. */
+(function () {
+  'use strict';
+  var App = (window.App = window.App || {});
+  var P = function (d) { return '<path d="' + d + '"/>'; };
+  var I = {
+    home: P('M3 11l9-8 9 8M5 10v10h14V10M10 20v-6h4v6'),
+    inbox: P('M22 12h-6l-2 3h-4l-2-3H2') + P('M5.5 5.1L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.5-6.9A2 2 0 0 0 16.7 4H7.3a2 2 0 0 0-1.8 1.1z'),
+    truck: P('M1 4h14v12H1z') + P('M15 8h4l4 4v4h-8z') + '<circle cx="5.5" cy="18.5" r="2.2"/><circle cx="18" cy="18.5" r="2.2"/>',
+    route: '<circle cx="6" cy="19" r="2.6"/><circle cx="18" cy="5" r="2.6"/>' + P('M8.6 19H17a3.5 3.5 0 0 0 0-7H7a3.5 3.5 0 0 1 0-7h8.4'),
+    users: P('M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2') + '<circle cx="9" cy="7" r="4"/>' + P('M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8'),
+    user: P('M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2') + '<circle cx="12" cy="7" r="4"/>',
+    box: P('M21 8l-9-5-9 5v8l9 5 9-5z') + P('M3.3 7.5L12 12.5l8.7-5M12 22v-9.5'),
+    cyl: P('M9 3h6M10 3v2.4M14 3v2.4') + P('M7 9.5A5 5 0 0 1 17 9.5V18a3 3 0 0 1-3 3h-4a3 3 0 0 1-3-3z') + P('M7 11h10'),
+    wallet: P('M20 12V8H6a2 2 0 0 1 0-4h12v4') + P('M4 6v12a2 2 0 0 0 2 2h14v-4') + P('M18 12a2 2 0 0 0 0 4h4v-4z'),
+    ledger: '<rect x="4" y="3" width="16" height="18" rx="2"/>' + P('M8 7h8M8 11h2M14 11h2M8 15h2M14 15h2'),
+    chart: P('M3 3v18h18') + P('M7 15l4-4 3 3 5-6'),
+    sliders: P('M4 6h9M17 6h3M4 12h3M11 12h9M4 18h11M19 18h1') + '<circle cx="15" cy="6" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="17" cy="18" r="2"/>',
+    bell: P('M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9') + P('M13.7 21a2 2 0 0 1-3.4 0'),
+    wifi: P('M5 12.5a11 11 0 0 1 14 0M1.4 9a16 16 0 0 1 21.2 0M8.5 16a6 6 0 0 1 7 0') + '<circle cx="12" cy="19.6" r=".6"/>',
+    wifioff: P('M5 12.5a11 11 0 0 1 3.7-2.2M1.4 9a16 16 0 0 1 4.3-2.7M8.5 16a6 6 0 0 1 7 0M16.7 10.4A11 11 0 0 1 19 12.5M22.6 9A16 16 0 0 0 12 5') + '<circle cx="12" cy="19.6" r=".6"/>' + P('M2 2l20 20'),
+    signal: P('M4 20v-3M9 20v-7M14 20v-11M19 20V5'),
+    check: P('M20 6L9 17l-5-5'),
+    checkc: '<circle cx="12" cy="12" r="9"/>' + P('M8 12.5l3 3 5-6'),
+    x: P('M18 6L6 18M6 6l12 12'),
+    xc: '<circle cx="12" cy="12" r="9"/>' + P('M9 9l6 6M15 9l-6 6'),
+    plus: P('M12 5v14M5 12h14'),
+    minus: P('M5 12h14'),
+    search: '<circle cx="11" cy="11" r="7"/>' + P('M21 21l-4.3-4.3'),
+    filter: P('M3 5h18l-7 8v6l-4 2v-8z'),
+    phone: '<rect x="7" y="2" width="10" height="20" rx="2.5"/>' + P('M11 18.5h2'),
+    msg: P('M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z'),
+    lock: '<rect x="4" y="11" width="16" height="10" rx="2"/>' + P('M8 11V7a4 4 0 0 1 8 0v4'),
+    clock: '<circle cx="12" cy="12" r="9"/>' + P('M12 7v5l3 2'),
+    alert: P('M10.3 3.9L2 18a2 2 0 0 0 1.7 3h16.6a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z') + P('M12 9v4M12 17h.01'),
+    refresh: P('M21 12a9 9 0 0 1-15.5 6.2L3 16M3 21v-5h5M3 12A9 9 0 0 1 18.5 5.8L21 8M21 3v5h-5'),
+    download: P('M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3'),
+    upload: P('M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12'),
+    qr: '<rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/>' + P('M14 14h3v3M21 14v.01M14 21h3M21 17v4'),
+    camera: P('M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z') + '<circle cx="12" cy="13" r="4"/>',
+    pin: P('M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z') + '<circle cx="12" cy="10" r="3"/>',
+    chevr: P('M9 6l6 6-6 6'), chevl: P('M15 6l-6 6 6 6'), chevd: P('M6 9l6 6 6-6'), chevu: P('M18 15l-6-6-6 6'),
+    up: P('M12 19V5M5 12l7-7 7 7'), down: P('M12 5v14M19 12l-7 7-7-7'),
+    menu: P('M3 6h18M3 12h18M3 18h18'),
+    shield: P('M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5z') + P('M9 12l2 2 4-4'),
+    db: '<ellipse cx="12" cy="5" rx="8" ry="3"/>' + P('M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3'),
+    server: '<rect x="3" y="4" width="18" height="6" rx="1.5"/><rect x="3" y="14" width="18" height="6" rx="1.5"/>' + P('M7 7h.01M7 17h.01'),
+    layers: P('M12 2L2 7l10 5 10-5z') + P('M2 17l10 5 10-5M2 12l10 5 10-5'),
+    flame: P('M12 22c4 0 7-3 7-7 0-3-2-5-3-7-1 2-2 3-3 3 0-4-2-7-4-9-1 4-4 6-4 12 0 5 3 8 7 8z'),
+    drop: P('M12 2.7C9 7 5 10.5 5 14.5a7 7 0 0 0 14 0c0-4-4-7.5-7-11.8z'),
+    out: P('M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9'),
+    edit: P('M12 20h9') + P('M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z'),
+    trash: P('M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6M10 11v6M14 11v6'),
+    eye: P('M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z') + '<circle cx="12" cy="12" r="3"/>',
+    flask: P('M9 3h6M10 3v6L4 19a2 2 0 0 0 1.7 3h12.6A2 2 0 0 0 20 19l-6-10V3') + P('M7 15h10'),
+    file: P('M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z') + P('M14 2v6h6M8 13h8M8 17h8'),
+    dollar: P('M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6'),
+    cal: '<rect x="3" y="4" width="18" height="18" rx="2"/>' + P('M16 2v4M8 2v4M3 10h18'),
+    list: P('M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01'),
+    link: P('M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7') + P('M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7'),
+    send: P('M22 2L11 13M22 2l-7 20-4-9-9-4z'),
+    activity: P('M22 12h-4l-3 9L9 3l-3 9H2'),
+    key: '<circle cx="8" cy="15" r="4"/>' + P('M10.8 12.2L21 2M16 7l3 3M18 5l3 3'),
+    building: '<rect x="5" y="2" width="14" height="20" rx="1.5"/>' + P('M9 22v-4h6v4M9 6h.01M12 6h.01M15 6h.01M9 10h.01M12 10h.01M15 10h.01M9 14h.01M12 14h.01M15 14h.01'),
+    info: '<circle cx="12" cy="12" r="9"/>' + P('M12 16v-4M12 8h.01'),
+    play: P('M6 4l14 8-14 8z'),
+    tag: P('M20.6 13.4l-7.2 7.2a2 2 0 0 1-2.8 0L2 12V2h10l8.6 8.6a2 2 0 0 1 0 2.8z') + P('M7 7h.01'),
+    book: P('M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z') + P('M4 19.5V22h16v-2.5'),
+    star: P('M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z'),
+    grid: '<rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>',
+    cpu: '<rect x="6" y="6" width="12" height="12" rx="2"/>' + P('M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4'),
+    cog: '<circle cx="12" cy="12" r="3"/>' + P('M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z'),
+    handshake: P('M3 12l4-4 4 2 3-2 4 3 3-2') + P('M3 12v5l5 3 3-2 3 2 4-3v-5'),
+    scale: P('M12 3v18M6 21h12M5 8l-3 7a4 4 0 0 0 6 0zM19 8l-3 7a4 4 0 0 0 6 0zM5 8h14')
+  };
+  App.ICONS = I;
+  App.ic = function (name, size, cls) {
+    var body = I[name]; if (!body) { body = I.info; }
+    var s = size || 18;
+    return '<svg class="ic' + (cls ? ' ' + cls : '') + '" width="' + s + '" height="' + s + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + body + '</svg>';
+  };
+})();
